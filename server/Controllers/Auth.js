@@ -13,7 +13,7 @@ export const login =async(req,res)=>{
                 const token=jwt.sign({
                     email:newuser.email, id:newuser._id
                 },process.env.JWT_SECERT,{
-                    expiresIn:"24h"
+                    expiresIn:"1h"
                 })
             res.status(200).json({result:newuser,token})
             } catch (error) {
