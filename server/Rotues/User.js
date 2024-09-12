@@ -8,6 +8,6 @@ routes.post("/login",login)
 routes.patch('/update/:id',updatechaneldata)
 routes.get('/getallchannel',getallchanels)
 
-routes.post("/addpoints", addtopoints);
-routes.get("/getpoints",getpoints)
+routes.post("/addpoints/", addtopoints);
+routes.get("/getpoints/:userId",getpoints)
 export default routes;
