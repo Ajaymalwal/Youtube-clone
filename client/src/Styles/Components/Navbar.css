@@ -1,0 +1,96 @@
+.navbar-container{
+    border: 1px solid black;
+    background-color: black;
+    width: 100%;
+    height:60px ;
+    box-sizing: border-box;
+    padding:0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Burger-Logo-navbar{
+    display: flex;
+   justify-content: left;
+   gap: 20px;
+}
+.Burger-navbar{
+    cursor: pointer;
+    display: flex ;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+}
+.Burger-navbar p{
+    margin: 0 auto;
+    height: 3px;
+    width: 40px;
+    background-color:white;
+    border-radius:10px ;
+}
+
+.Logo-navbar{
+    height: 56px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Logo-navbar  div{
+   height: 50px;
+    display: flex;
+    gap: 5px;
+}
+.youtube-logo{
+    height: auto;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.youtube-logo-name{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: auto;
+    color: white;
+   
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+}
+.apps-Box{
+    width: 17px;
+    display: flex;
+    gap: 4px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.appBox{
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    border: 1px solid white;
+
+}
+.Chanel_logo_App{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fstChar_logo_App{
+   font-weight: bold;
+   font-size: 1.2rem;
+    
+}
+.Auth_Btn{
+    border: 2px solid rgb(0, 153, 255);
+    padding: 5px 10px;
+}
+.Auth-cont-Navbar{
+    cursor: pointer;
+}
