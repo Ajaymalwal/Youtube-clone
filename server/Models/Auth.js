@@ -6,8 +6,10 @@ const userschema = mongoose.Schema({
  name:{type:String},
  desc:{type:String},
  joinedon:{type:Date,default:Date.now},
-
-
+ downvid:[{type:String}],
+ downchance:{type:Number,default:1},
+ lastDownload: { type: Date },
+ usertype:{type:String,enum:['Free','Premium'],default:"Free"}
 })
 
 export default mongoose.model("User",userschema)

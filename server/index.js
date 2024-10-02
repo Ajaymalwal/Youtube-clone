@@ -7,6 +7,8 @@ import userroutes from "./Rotues/User.js"
 import videoroutes from './Rotues/video.js'
 import path from "path"
 import commentroutes from './Rotues/comment.js'
+import users from './Models/Auth.js'
+import cron from 'node-cron'
 dotenv.config();
 
 
@@ -39,3 +41,13 @@ mongoose.connect(DB_URL).then(()=>{
 }).catch((error)=>{
     console.log(error)
 })
+
+cron.schedule('0 0 * * *', async () => {
+    try {
+
+        await users.updateMany({ usertype: 'Free' }, { downchance: 1 });
+        console.log("Download chances reset for free users");
+    } catch (error) {
+        console.error("Error resetting download chances:", error);
+    }
+});
