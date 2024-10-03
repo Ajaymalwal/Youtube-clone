@@ -42,7 +42,7 @@ mongoose.connect(DB_URL).then(()=>{
     console.log(error)
 })
 
-cron.schedule('0 0 * * *', async () => {
+cron.schedule('* * * * *', async () => {
     try {
 
         await users.updateMany({ usertype: 'Free' }, { downchance: 1 });
@@ -50,4 +50,6 @@ cron.schedule('0 0 * * *', async () => {
     } catch (error) {
         console.error("Error resetting download chances:", error);
     }
+}, {
+    timezone: "Asia/Kolkata" // Use the correct time zone (e.g., for IST)
 });
