@@ -42,7 +42,7 @@ mongoose.connect(DB_URL).then(()=>{
     console.log(error)
 })
 
-cron.schedule('* * * * *', async () => {
+cron.schedule('0 0 * * *', async () => {
     try {
 
         await users.updateMany({ usertype: 'Free' }, { downchance: 1 });
